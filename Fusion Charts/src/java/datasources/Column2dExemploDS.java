@@ -1,6 +1,12 @@
 package datasources;
 
 import app.Datasource;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.ServletContext;
 
 /**
  *
@@ -8,22 +14,30 @@ import app.Datasource;
  */
 public class Column2dExemploDS extends Datasource {
 
-    @Override
-    public String getChart() {
-        return "\"caption\": \"Monthly revenue for last year\",\n"
-                + "                \"subCaption\": \"Harry's SuperMart\",\n"
-                + "                \"xAxisName\": \"Month\",\n"
-                + "                \"yAxisName\": \"Revenues (In USD)\",\n"
-                + "                \"theme\": \"zune\"";
+    public Column2dExemploDS(ServletContext servletContext) {
+        super(servletContext);
     }
-
+    
     @Override
     public String getData() {
-        return "{\n                   \"label\": \"Jan\",\n                   \"value\": \"420000\"\n"
-                + "                 },{\n                    \"label\": \"Feb\",\n                    \"value\": \"810000\"\n"
-                + "                 },{"
-                + "\n                    \"label\": \"Mar\",\n                    \"value\": \"720000\"\n"
-                + "                 }";
+        String path = getServletContext().getRealPath("/WEB-INF/charts/column2d.js");
+        File file = new File(path);
+        
+        try(Scanner scan = new Scanner(file)) {
+            StringBuilder sb = new StringBuilder();
+            
+            String nl = "";
+            while(scan.hasNextLine()) {
+                sb.append(nl).append(scan.nextLine());
+                nl = "\n\t\t";
+            }
+            
+            return sb.toString();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Column2dExemploDS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return "";
     }
 
 }

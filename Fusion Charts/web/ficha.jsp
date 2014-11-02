@@ -59,15 +59,14 @@ FusionCharts.ready(function() {
             "chart": {
                 ${chart.datasource.chart}
             },
-            "data": [
-                ${chart.datasource.data}
-            ]
+            "data": 
+            ${chart.datasource.data}
         }
     });                    
 
     chart.render();
 });
-</code>
+                    </code>
                 </pre>
             </div>
         </div>
@@ -83,9 +82,7 @@ FusionCharts.ready(function() {
                         "chart": {
                             ${chart.datasource.chart}
                         },
-                        "data": [
-                            ${chart.datasource.data}
-                        ]
+                        "data": ${chart.datasource.data}
                     }
                 });
 

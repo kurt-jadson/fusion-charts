@@ -21,7 +21,14 @@ public class FusionServlet extends HttpServlet {
         
         FusionChart chart = new FusionChart();
         chart.setType(Type.COLUMN_2D);
-        chart.setDatasource(new Column2dExemploDS());
+        
+        Datasource ds = new Column2dExemploDS(request.getServletContext());
+        ds.setCaption("Monthly revenue for last year");
+        ds.setSubCaption("Harry's SuperMart");
+        ds.setxAxisName("Month");
+        ds.setyAxisName("Revenues (In USD)");
+        ds.setTheme("zune");
+        chart.setDatasource(ds);
         
         request.setAttribute("chart", chart);
         request.getRequestDispatcher("/ficha.jsp").forward(request, response);
