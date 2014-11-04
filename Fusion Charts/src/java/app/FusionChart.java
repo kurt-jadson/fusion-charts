@@ -7,7 +7,7 @@ package app;
 public class FusionChart {
 
     private Type type;
-    private Datasource datasource;
+    private String datasource;
 
     public Type getType() {
         return type;
@@ -17,11 +17,11 @@ public class FusionChart {
         this.type = type;
     }
 
-    public Datasource getDatasource() {
+    public String getDatasource() {
         return datasource;
     }
 
-    public void setDatasource(Datasource datasource) {
+    public void setDatasource(String datasource) {
         this.datasource = datasource;
     }
     

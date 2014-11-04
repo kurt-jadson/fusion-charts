@@ -11,33 +11,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Fusion Charts</title>
         <!-- Fusion Charts Javascript's -->
-        <script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
-        <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.zune.js"></script>
+        <script type="text/javascript" src="/fusion/fusioncharts/js/fusioncharts.js"></script>
+        <script type="text/javascript" src="/fusion/fusioncharts/js/themes/fusioncharts.theme.zune.js"></script>
         <!-- Highlight -->
-        <link rel="stylesheet" href="highlight/styles/obsidian.css">
-        <script src="highlight/highlight.pack.js"></script>
+        <link rel="stylesheet" href="/fusion/highlight/styles/obsidian.css">
+        <script src="/fusion/highlight/highlight.pack.js"></script>
         <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
         <!-- Estilos da página -->
-        <style>
-            .centro {
-                margin: 0 auto;
-                width: 1024px;
-            }
-            .meio {
-                display: inline-block;
-                vertical-align: top;
-                width: 508px;
-            }
-            pre {
-                margin: 0;
-            }
-            code.hljs {
-                padding: 2px;
-                padding-left: 10px;
-                margin: 0;
-                padding-bottom: 25px;
-            }
-        </style>
+        <link href="/fusion/assets/estilo.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div class="centro">
@@ -55,13 +36,7 @@ FusionCharts.ready(function() {
         width: "500",
         height: "300",
         dataFormat: "json", 
-        dataSource: {
-            "chart": {
-                ${chart.datasource.chart}
-            },
-            "data": 
-            ${chart.datasource.data}
-        }
+        dataSource: ${chart.datasource}
     });                    
 
     chart.render();
@@ -78,16 +53,22 @@ FusionCharts.ready(function() {
                     width: "450",
                     height: "300",
                     dataFormat: "json",
-                    dataSource: {
-                        "chart": {
-                            ${chart.datasource.chart}
-                        },
-                        "data": ${chart.datasource.data}
-                    }
+                    dataSource: ${chart.datasource}
                 });
 
                 chart.render();
             });
         </script>
+        <footer>
+            <div class="rodape">
+                <ul>
+                    <li><a href="column2d">Coluna 2D</a></li>
+                    <li> | </li>
+                    <li><a href="mscolumn2d">Colunas Multisérie 2D</a></li>
+                    <li> | </li>
+                    <li><a href="stackedcolumn2d">Colunas Empilhadas 2D</a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
