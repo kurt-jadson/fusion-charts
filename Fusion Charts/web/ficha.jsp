@@ -29,35 +29,13 @@
             <div class="meio">
                 <pre>
                     <code class="javascript">
-FusionCharts.ready(function() {
-    var chart = new FusionCharts({
-        type: "${chart.type.name}",
-        renderAt: "chartContainer",
-        width: "500",
-        height: "300",
-        dataFormat: "json", 
-        dataSource: ${chart.datasource}
-    });                    
-
-    chart.render();
-});
+<jsp:include page="fusionchart.jsp" />
                     </code>
                 </pre>
             </div>
         </div>
         <script type="text/javascript">
-            FusionCharts.ready(function() {
-                var chart = new FusionCharts({
-                    type: "${chart.type.name}",
-                    renderAt: "chartContainer",
-                    width: "450",
-                    height: "300",
-                    dataFormat: "json",
-                    dataSource: ${chart.datasource}
-                });
-
-                chart.render();
-            });
+            <jsp:include page="fusionchart.jsp" />
         </script>
         <footer>
             <div class="rodape">
