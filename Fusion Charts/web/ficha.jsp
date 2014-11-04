@@ -22,14 +22,12 @@
     </head>
     <body>
         <div class="centro">
-            <div style="text-align: center; text-transform: uppercase; text-decoration: underline;">
-                Exemplo de gráfico de ${chart.type.chartType}
-            </div>
+            <div class="titulo">Exemplo de gráfico de ${chart.type.chartType}</div>
             <div class="meio" id="chartContainer">O gráfico será criado aqui!</div>
             <div class="meio">
                 <pre>
                     <code class="javascript">
-<jsp:include page="fusionchart.jsp" />
+                        <jsp:include page="fusionchart.jsp" />
                     </code>
                 </pre>
             </div>

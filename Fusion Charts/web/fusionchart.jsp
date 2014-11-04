@@ -1,3 +1,4 @@
+
 FusionCharts.ready(function() {
     var chart = new FusionCharts({
         type: "${chart.type.name}",

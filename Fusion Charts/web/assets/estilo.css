@@ -1,3 +1,8 @@
+.titulo {
+    text-align: center; 
+    text-transform: uppercase; 
+    text-decoration: underline;
+}
 .centro {
     margin: 0 auto;
     width: 1024px;
@@ -11,7 +16,7 @@ pre {
     margin: 0;
 }
 code.hljs {
-    padding: 2px;
+    padding: 0px;
     padding-left: 10px;
     margin: 0;
     padding-bottom: 25px;
