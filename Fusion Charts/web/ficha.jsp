@@ -43,6 +43,12 @@
                     <li><a href="mscolumn2d">Colunas Multisérie 2D</a></li>
                     <li> | </li>
                     <li><a href="stackedcolumn2d">Colunas Empilhadas 2D</a></li>
+                    <li> | </li>
+                    <li><a href="mscombi2d">Multisérie Combinado 2D</a></li>
+                    <li> | </li>
+                    <li><a href="column3d">Coluna 3D</a></li>
+                    <li> | </li>
+                    <li><a href="pie2d">Pizza 2D</a></li>
                 </ul>
             </div>
         </footer>
